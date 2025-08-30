@@ -31,12 +31,10 @@ export default function App() {
     setFade(true);
 
     setTimeout(() => {
-      // pick random affirmation
       const randomAffirmation =
         affirmations[Math.floor(Math.random() * affirmations.length)];
       setMessage(randomAffirmation);
 
-      // pick random background
       const randomBackground =
         backgrounds[Math.floor(Math.random() * backgrounds.length)];
       setBackground(randomBackground);
@@ -57,6 +55,9 @@ export default function App() {
       {message && (
         <p className={`message ${fade ? "fade-out" : "fade-in"}`}>{message}</p>
       )}
+      
+     
+      <p className="footer">Created by: Raf ✨</p>
     </div>
   );
 }

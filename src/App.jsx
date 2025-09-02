@@ -11,7 +11,7 @@ const affirmations = [
   "You deserve peace, joy, and all the gentle things in life. 🌼",
   "Every step you take leaves the world a little better than it was. 🌍",
   "I know you are feeling under the weather, please get well the soonest! 💊",
-  "Please keep smiling, it makes my heart skip a beat wheneve I see it. 😊",
+  "Please keep smiling, it makes my heart skip a beat whenever I see it. 😊",
   "Green looks great in you. But so is Pink, White, and me beside you. 😉"
 ];
 

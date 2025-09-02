@@ -29,18 +29,30 @@ export default function App() {
   const [message, setMessage] = useState("");
   const [fade, setFade] = useState(false);
   const [background, setBackground] = useState(backgrounds[0]);
+  const [lastMessage, setLastMessage] = useState(null);
+  const [lastBackground, setLastBackground] = useState(null);
 
   const getAffirmation = () => {
     setFade(true);
 
     setTimeout(() => {
-      const randomAffirmation =
-        affirmations[Math.floor(Math.random() * affirmations.length)];
-      setMessage(randomAffirmation);
+      let newMessage;
+      do {
+        newMessage =
+          affirmations[Math.floor(Math.random() * affirmations.length)];
+      } while (newMessage === lastMessage);
 
-      const randomBackground =
-        backgrounds[Math.floor(Math.random() * backgrounds.length)];
-      setBackground(randomBackground);
+      let newBackground;
+      do {
+        newBackground =
+          backgrounds[Math.floor(Math.random() * backgrounds.length)];
+      } while (newBackground === lastBackground);
+
+      setMessage(newMessage);
+      setBackground(newBackground);
+
+      setLastMessage(newMessage);
+      setLastBackground(newBackground);
 
       setFade(false);
     }, 300);
@@ -51,7 +63,7 @@ export default function App() {
       className="app"
       style={{ background, transition: "background 1s ease" }}
     >
-    <p className="footer">To my Dearest: Zee 🌷</p>
+      <p className="footer">To my Dearest: Zee 🌷</p>
       <h1 className="title">Daily Affirmation for You 💕</h1>
       <button onClick={getAffirmation} className="btn">
         Get Affirmation
@@ -59,8 +71,7 @@ export default function App() {
       {message && (
         <p className={`message ${fade ? "fade-out" : "fade-in"}`}>{message}</p>
       )}
-      
-     
+
       <p className="footer">Created by: Raf ✨</p>
     </div>
   );

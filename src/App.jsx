@@ -48,6 +48,7 @@ export default function App() {
       className="app"
       style={{ background, transition: "background 1s ease" }}
     >
+    <p className="footer">To my Dearest: Zee 🌷</p>
       <h1 className="title">Daily Affirmation for You 💕</h1>
       <button onClick={getAffirmation} className="btn">
         Get Affirmation

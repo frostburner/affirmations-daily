@@ -4,6 +4,7 @@ import "./App.css";
 export default function MainPage() {
   return (
     <div className="app">
+         <p className="footer">To my Dearest: Zee 🌷</p>
       <h1 className="title">Welcome 🌸</h1>
       <p className="subtitle">Choose something made just for you 💖</p>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 const affirmations = [
@@ -68,6 +69,11 @@ export default function AffirmationsPage() {
       <button onClick={getAffirmation} className="btn">
         Get Affirmation
       </button>
+
+
+         <Link to="/" className="back-btn">
+        ⬅ Back to Home
+      </Link>
       {message && (
         <p className={`message ${fade ? "fade-out" : "fade-in"}`}>{message}</p>
       )}

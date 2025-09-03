@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./App.css";
 
 // Import your images
@@ -28,10 +29,15 @@ export default function ArtPage() {
 
   return (
     <div className="app">
+         <p className="footer">To my Dearest: Zee 🌷</p>
       <h1 className="title">🎨 Gallery for you, my dearest! </h1>
       <button onClick={getArtwork} className="btn">
         Show Random Artwork
       </button>
+
+         <Link to="/" className="back-btn">
+        ⬅ Back to Home
+      </Link>
 
       {art && (
         <div className="art-container">

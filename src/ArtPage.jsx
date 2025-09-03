@@ -35,9 +35,7 @@ export default function ArtPage() {
         Show Random Artwork
       </button>
 
-         <Link to="/" className="back-btn">
-        ⬅ Back to Home
-      </Link>
+        
 
       {art && (
         <div className="art-container">
@@ -45,6 +43,9 @@ export default function ArtPage() {
         </div>
       )}
 
+ <Link to="/" className="back-btn">
+        ⬅ Back to Home
+      </Link>
       <p className="footer">Created by: Raf ✨</p>
     </div>
   );

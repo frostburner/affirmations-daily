@@ -71,13 +71,13 @@ export default function AffirmationsPage() {
       </button>
 
 
-         <Link to="/" className="back-btn">
-        ⬅ Back to Home
-      </Link>
       {message && (
         <p className={`message ${fade ? "fade-out" : "fade-in"}`}>{message}</p>
       )}
 
+         <Link to="/" className="back-btn">
+        ⬅ Back to Home
+      </Link>
       <p className="footer">Created by: Raf ✨</p>
     </div>
   );
